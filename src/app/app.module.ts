@@ -8,7 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: 'create-user', component: CreateUserComponent }
+  { path: 'create-user',
+    component: CreateUserComponent,
+    data: { title: 'Create User' }
+  }
 ];
 
 
