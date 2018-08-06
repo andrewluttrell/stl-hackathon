@@ -13,7 +13,7 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
-  it(`should have as title 'hackathon-app'`, async(() => {
+  it(`should have as title 'STL Hackathon Team 9'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('hackathon-app');
