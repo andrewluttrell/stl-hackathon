@@ -7,12 +7,15 @@ function createUser($USER, $EMAIL, $PASSWD) {
 }
 
 // Determin action
-if( isset($_POST['user']) &&
-    isset($_POST['email']) &&
-    isset($_POST['passwd'])) {
+if($_SERVER['REQUEST_METHOD'] == "POST") {
+    if( isset($_POST["userName"], $_POST["emailName"], $_POST["passwdVal"])) {
         createUser($_POST["user"], $_POST["email"], $_POST["passwd"]);
-} else {
-    echo "<h2>Error! Illegal Access Attempt!</h2>";
+    } else {
+        echo "<p>". "User:" . $_POST["userName"] .
+             " Email: " . $_POST["emailName"] .
+             " Passwd:" . $_POST["passwdVal"] .
+             "</p>";
+        echo "<h2>Error! Illegal Access Attempt!</h2>";
+    }
 }
-
 ?>
