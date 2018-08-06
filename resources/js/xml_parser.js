@@ -1,3 +1,5 @@
 function processPostData(returnData) {
-    document.getElementsByTagName("body").innerHTML = returnData.responseText;
+    console.log(returnData);
+
+    document.getElementsByTagName("body").innerHTML = returnData;
 }
