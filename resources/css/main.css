@@ -86,3 +86,54 @@
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
+
+.userHomeRow1 {
+	background-color: rgba(17, 118, 181, 1);
+	box-sizing: border-box;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(204, 204, 204, 1);
+	border-radius: 0px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-family: 'Arial Bold', 'Arial';
+	font-weight: 700;
+	font-style: normal;
+	font-size: 14px;
+	color: #CCCCCC;
+}
+
+.userHomeRow2 {
+	background-color: rgba(241, 91, 42, 1);
+	box-sizing: border-box;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(204, 204, 204, 1);
+	border-radius: 0px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-family: 'Arial Bold', 'Arial';
+	font-weight: 700;
+	font-style: normal;
+	font-size: 14px;
+	color: #CCCCCC;
+}
+
+.userHomeRow3 {
+	background-color: rgba(1, 167, 157, 1);
+	box-sizing: border-box;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(204, 204, 204, 1);
+	border-radius: 0px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-family: 'Arial Bold', 'Arial';
+	font-weight: 700;
+	font-style: normal;
+	font-size: 14px;
+	color: #CCCCCC;
+}
