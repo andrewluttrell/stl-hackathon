@@ -18,8 +18,8 @@ $user="";
 $passwd="";
 // Determin action
 if($_SERVER['REQUEST_METHOD'] == "POST") {
-    if( isset($_POST["user"], $_POST["passwd"])) {
-      createUser($_POST["user"], $_POST["passwd"]);
+    if( isset($_POST["userLogin"], $_POST["userPasswd"])) {
+      createUser($_POST["userLogin"], $_POST["userPasswd"]);
     } else {
         echo "<h2>Error! Illegal Access Attempt!</h2>";
     }

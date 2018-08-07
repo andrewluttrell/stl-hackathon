@@ -21,7 +21,7 @@ function insertNewUser($user) {
     $id = $row["MAX(id)"] + 1;
   }
 
-  $sql = "INSERT INTO shop_user (id, name, pw, interest_rate, minimum_monthly, loan_rate, lawn, babysit, payoff) " .
+  $sql = "INSERT INTO shop_user (id, name, pass, interest_rate, minimum_monthly, loan_rate, lawn, babysit, payoff) " .
          "VALUES ($id, \"$user->name\", \"$user->pass\", $user->interest_rate, $user->min_monthly, $user->loan_rate, $user->lawn, $user->babysit, $user->payoff)";
   if( $db->exec($sql) ){
     echo "New user successfully created.";
