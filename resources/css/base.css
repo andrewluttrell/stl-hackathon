@@ -14,3 +14,9 @@ body {
 ul, ol {
     list-style: none;
 }
+
+.loginOwl {
+  width: 171px;
+  height: 174px;
+  margin: 45px;
+}

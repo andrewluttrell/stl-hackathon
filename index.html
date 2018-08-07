@@ -13,26 +13,24 @@
 
 
     <center>
-        <img src="resources/images/owl.svg" alt="">
+        <img  class="loginOwl" src="resources/images/owl.svg" alt="">
     </center>
 
     <center>
         <div id="facebook_button" class="hoverColor" data-label="Rectangle">
-            <img class="login-button-images" src="resources/images/fbLogo.png">
-            <span>Login with Facebook</span>
+            <p><img class="login-button-images" src="resources/images/fbLogo.png">Login with Facebook</p>
         </div>
     </center>
     <center>or login manually</center>
     <center>
         <div id="twitter_button" class="hoverColor" data-label="Rectangle">
-            <img class="login-button-images" src="resources/images/twLogo.png">
-            <span>Login with Twitter</span>
+          <p><img class="login-button-images" src="resources/images/twLogo.png">Login with Twitter</p>
         </div>
     </center>
 
     <center>
         <form action="resources/php/login.php" method="post">
-            <input type="text" name="userLogin" placeholder="User Name" value=""><br/>
+            <input type="text" name="userLogin" placeholder="User Account" value=""><br/>
             <input type="password" name="userPasswd" placeholder="Password" value=""> <br/>
             <input id="login-button" class="hoverColor" type="submit" name="submit" value="Login">
         </form>
