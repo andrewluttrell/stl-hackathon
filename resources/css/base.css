@@ -2,3 +2,15 @@ html {
     margin: 0em;
     padding: 0em;
 }
+
+body {
+    min-width: 414px;
+    min-height: 735px;
+    max-width: 414px;
+    max-height: 735px;
+    margin: 0px auto;
+}
+
+ul, ol {
+    list-style: none;
+}
