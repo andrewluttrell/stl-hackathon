@@ -1,8 +1,18 @@
 <?php
+// Inialize session
+session_start();
+
+// Include database connection settings
+include('database.php');
+include('userPageTemplate.php');
+
 
 function loginUser($USER, $PASSWD) {
     if (checkDB($USER, $PASSWD) == true) {
-        session_start();  // mmmmmmmm...
+        $_SESSION['userDat'] = $_POST['username'];
+        // generate a randome id
+        // save to db with expire timeframe included
+        // load user page template
         echo "<p>User found.<p>";
     } else {
         echo "<p>User not found or password incorrect.<p>";

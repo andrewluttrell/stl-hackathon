@@ -1,7 +1,11 @@
 function checkAccess() {
-    var cookie = getCookie("");
-    var data   = "sessionCookie=" + cookie;
-    doAjax("resources/php/userHub.php", data)
+    var cookie = getCookie("userDat");
+    if (cookie != undefined) {
+        var data   = "sessionCookie=" + cookie;
+        doAjax("resources/php/userHub.php", data)
+    } else {
+        
+    }
 }
 
 function submitNewUser() {
