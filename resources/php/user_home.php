@@ -9,20 +9,22 @@
     </head>
     <body>
 
-    <?php
-        if(!isset($_COOKIE["userDat"])) {
-            echo "<center><h2>Not logged in!</h2></center>";
-            echo "<center><h3>PLease login <a href='../../index.html'>HERE</a></h3></center>";
-        } else {
-            echo "<div id='master-container' class='background-gradient-purple'>";
-            echo "<img clas='owlSmall' src='../images/owl.svg'/>";
-            echo "<center><p>Choose what you want to do...</p></center>";
-            echo "<div class='userHomeRow1 hoverColor' onclick=\"location.href='shop.php'\"><img clas='owlSmall' src='../images/cam.svg'/><span>Let's go shopping!</span></div>";
-            echo "<div class='userHomeRow2 hoverColor'><img clas='owlSmall' src='../images/glass.svg'/><span>Search for your goods.</span></div>";
-            echo "<div class='userHomeRow3 hoverColor'><img clas='owlSmall' src='../images/book.svg'/><span>Definitions for all those strange terms.</span></div>" ;
-            echo "</div>";
-        }
-    ?>
+    <?php if(!isset($_COOKIE["userDat"])) { ?>
+        <div id='master-container' class='background-gradient-purple'>
+          <center><h2>Not logged in!</h2></center>
+          <center><h3>PLease login <a href='../../index.html'>HERE</a></h3></center>
+        </div>
+    <?php } else { ?>
+        <div id='master-container' class='background-gradient-purple'>
+          <img class='owlSmall' src='../images/owl.svg'/>
+          <center><p class="homeText">Choose what you want to do...</p></center>
+          <ul>
+            <li class='userHomeRow userHomeRow1 hoverColor' onclick="location.href='shop.php'"><img class='userHomeIcon' src='../images/cam.svg'/><div class="userHomeText">Let's go shopping!</div></li>
+            <li class='userHomeRow userHomeRow2 hoverColor'><img class='userHomeIcon' src='../images/glass.svg'/><div class="userHomeText">Search for your goods.</div></li>
+            <li class='userHomeRow userHomeRow3 hoverColor'><img class='userHomeIcon' src='../images/book.svg'/><div class="userHomeText">Definitions for all those strange terms.</div></li>
+          </ul>
+        </div>
+    <?php } ?>
 
 
     </body>
