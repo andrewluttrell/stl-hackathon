@@ -1,11 +1,13 @@
 <?php
+// Inialize session
+session_start();
 
-function checkDB($SESSIONCOOKIE) {
-    // mo logic here
-}
+// Include database connection settings
+include('database.php');
+
 
 function checkSessionCookie($SESSIONCOOKIE) {
-    if ($SESSIONCOOKIE == checkDB($SESSIONCOOKIE)) {
+    if ($SESSIONCOOKIE == checkLoginDB($SESSIONCOOKIE)) {
         echo $SESSIONCOOKIE;
     } else {
         // Prompt a login here
