@@ -2,9 +2,52 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>Create User</title>
+    <title>#IdoS Signup</title>
+
+    <link rel="stylesheet" href="resources/css/base.css"/>
+    <link rel="stylesheet" href="resources/css/main.css"/>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 </head>
 <body>
+
+
+    <div id="master-container" class="background-gradient-purple">
+
+
+    <center>
+        <img src="resources/images/owl.svg" alt="">
+    </center>
+
+    <center>
+        <div id="facebook_button" class="ax_default shape1 mouseOver" data-label="Rectangle">
+            <img class="login-button-images" src="resources/images/fbLogo.png">
+            <span>Signup with Facebook</span>
+        </div>
+    </center>
+    <center>or sign up manually</center>
+    <center>
+        <div id="twitter_button" class="ax_default shape1 mouseOver" data-label="Rectangle">
+            <img class="login-button-images" src="resources/images/twLogo.png">
+            <span>Signup with Twitter</span>
+        </div>
+    </center>
+
+    <center>
+        <form action="resources/php/signup.php" method="post">
+            <input type="text" name="userLogin" placeholder="Email Address" value=""><br/>
+            <input type="text" name="userPasswd" placeholder="Password" value=""> <br/>
+            <input id="login-button" type="submit" name="submit" value="Sign up for my new account">
+        </form>
+    </center>
+    <center>
+    <p>
+        <span style="font-family:'Arial';font-weight:400;font-style:normal;color:#FFFFFF;">Have an account?</span>
+        <a href="login.html"><span style="font-family:'Arial';font-weight:400;font-style:normal;color:#0099FF;">Sign up!</span></a>
+    </p>
+    </center>
+    </div>
+
+
     <div>
       <form action="/resources/php/create_user.php" method="post">
         <input type="text" name="user" placeholder="User" value="">
