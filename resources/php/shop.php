@@ -8,6 +8,7 @@
   </head>
   <body>
       <div id="productInfoPopupWindow">
+          <span class="closePopupWindowButton">X</span>
 
       </div>
 
