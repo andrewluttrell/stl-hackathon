@@ -1,9 +1,14 @@
 <?php
 
-function createUser($USER, $EMAIL, $PASSWD) {
-    echo "<p>User: " . $USER .
-         "Email: " . $EMAIL .
-         "Password: " . $PASSWD . "<p>";
+function createUser($USER, $PASSWD) {
+    console_log( $USER );
+    console_log( $PASSWD );
+}
+
+function console_log( $data ){
+  echo '<script>';
+  echo 'console.log('. json_encode( $data ) .')';
+  echo '</script>';
 }
 
 // CHEAT sheet
@@ -31,15 +36,14 @@ function createUser($USER, $EMAIL, $PASSWD) {
     // RDS_PASSWORD – The password that you configured for your database.
 
 //
-
-
+$user="";
+$passwd="";
 // Determin action
 if($_SERVER['REQUEST_METHOD'] == "POST") {
-    if( isset($_POST["userName"], $_POST["emailName"], $_POST["passwdVal"])) {
-        createUser($_POST["userName"], $_POST["emailName"], $_POST["passwdVal"]);
+    if( isset($_POST["user"], $_POST["passwd"])) {
+      createUser($_POST["user"], $_POST["passwd"]);
     } else {
-        echo "<p>". "User:" . $_POST["userName"] .
-             " Email: " . $_POST["emailName"] .
+      echo "<p>". "User:" . $_POST["userName"] .
              " Passwd:" . $_POST["passwdVal"] .
              "</p>";
         echo "<h2>Error! Illegal Access Attempt!</h2>";
