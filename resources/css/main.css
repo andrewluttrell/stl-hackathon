@@ -137,3 +137,13 @@
 	font-size: 14px;
 	color: #CCCCCC;
 }
+
+.owlSmall {
+    width: 128px;
+    height: 128px;
+}
+
+.hoverColor:hover {
+    background-color: #444444;
+    cursor: pointer;
+}
