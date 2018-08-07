@@ -1,20 +1,11 @@
 function checkAccess() {
     var cookie = getCookie("userDat");
-    if (cookie != undefined) {
+    if (cookie != "") {
         var data   = "sessionCookie=" + cookie;
         doAjax("resources/php/userHub.php", data)
     } else {
-
+        doAjax("resources/php/login.php", data)
     }
-}
-
-function submitNewUser() {
-    var userName  = document.getElementsByName("user")[0].value;
-    var emailName = document.getElementsByName("email")[0].value;
-    var passName  = document.getElementsByName("passwd")[0].value;
-
-    var data = "userName=" + userName + "&emailName=" + emailName + "&passwdVal=" + passName;
-    doAjax("resources/php/create_user.php", data)
 }
 
 function doAjax(processURI, formData) {
