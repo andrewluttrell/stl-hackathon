@@ -1,29 +1,19 @@
-#bg {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    z-index: -999;
-}
-#bg img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -999;
-}
-
 #master-container {
-    width: 100%;
+    min-width: 414px;
     min-height: 735px;
+    max-width: 414px;
+    max-height: 735px;
+    overflow: auto;
 }
 
+#productInfoPopupWindow {
+    position: fixed;
+    width: 100%;
+    height: 735px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.65);
+}
 
-/* Login Page */
 
 #facebook_button, #twitter_button {
 	width: 300px;
@@ -147,6 +137,6 @@
 }
 
 .hoverColor:hover {
-    background-color: #444444;
+    background-color: rgb(64, 64, 64);
     cursor: pointer;
 }
