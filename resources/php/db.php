@@ -1,48 +1,60 @@
 <?php
 
-// CHEAT sheet
-// https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_PHP.rds.html#php-rds-create
-//
-// will be using -->  SQL Server – PDO_SQLSRV
-  //
-  //
-  // RDS_HOSTNAME – The hostname of the DB instance.
-  //
-  // Amazon RDS console label – Endpoint (this is the hostname)
-  //
-  // RDS_PORT – The port on which the DB instance accepts connections. The default value varies among DB engines.
-  //
-  // Amazon RDS console label – Port
-  //
-  // RDS_DB_NAME – The database name, ebdb.
-  //
-  // Amazon RDS console label – DB Name
-  //
-  // RDS_USERNAME – The user name that you configured for your database.
-  //
-  // Amazon RDS console label – Username
-  //
-  // RDS_PASSWORD – The password that you configured for your database.
+include("user.php");
 
-//
-$dbhost = $_SERVER['RDS_HOSTNAME'];
-$dbport = $_SERVER['RDS_PORT'];
-$dbname = $_SERVER['RDS_DB_NAME'];
-
-$dsn = "sqlsrv:Server={$dbhost},{$dbport};Database={$dbname}";
-$username = $_SERVER['RDS_USERNAME'];
-$password = $_SERVER['RDS_PASSWORD'];
-
-function getDBConnection() {
-  $connection = new PDO($dsn, $username, $password);
-
-  return $connection;
+class myDB extends SQLite3 {
+  function __construct() {
+    $this->open('../db/idos');
+  }
+}
+function getDB() {
+  $db = new myDB();
+  return $db;
 }
 
-function insertNewUser($user, $pass) {
-  $connection = getDBConnection();
-  $sql = "INSERT INTO shop_users (user_name, password) VALUES ( $user,$pass)";
-  $result = $connection->query($sql);
+function insertNewUser($user) {
+  $db = getDB();
+  $statement = $db->prepare('SELECT MAX(id) from shop_user');
+  $result = $statement->execute();
+  $id = 0;
+  while($row = $result->fetchArray()) {
+    $id = $row["MAX(id)"] + 1;
+  }
+
+  $sql = "INSERT INTO shop_user (id, name, pw, interest_rate, minimum_monthly, loan_rate, lawn, babysit, payoff) " .
+         "VALUES ($id, \"$user->name\", \"$user->pass\", $user->interest_rate, $user->min_monthly, $user->loan_rate, $user->lawn, $user->babysit, $user->payoff)";
+  if( $db->exec($sql) ){
+    echo "New user successfully created.";
+  } else {
+    echo "something broke. <br>" . $db->error;
+  }
+}
+
+function checkUser($user, $pass) {
+  $db = getDB();
+  $statement = $db->prepare('SELECT * FROM shop_user WHERE name=:name AND pass=:pass');
+  $statement->bindValue(':name', $user);
+  $statement->bindValue(':pass', $pass);
+  $result = $statement->execute();
+
+  if($result->fetchArray() == 0) {
+    echo "No user found with those credentials.";
+  } else {
+    while( $row = $result->fetchArray() ) {
+      $user = getNewUser();
+      $user->id = $row["id"];
+      $user->name = $row["name"];
+      $user->pass = $row["pass"];
+      $user->interest_rate = $row["interest_rate"];
+      $user->min_monthly = $row["minimum_monthly"];
+      $user->loan_rate = $row["loan_rate"];
+      $user->lawn = $row["lawn"];
+      $user->babysit = $row["babysit"];
+      $user->payoff = $row["payoff"];
+
+      return $user;
+    }
+  }
 }
 
 ?>
