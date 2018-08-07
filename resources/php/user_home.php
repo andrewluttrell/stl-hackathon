@@ -12,7 +12,7 @@
     <?php
         if(!isset($_COOKIE["userDat"])) {
             echo "<center><h2>Not logged in!</h2></center>";
-            echo "<center><h3>PLease login <a href='../../login.html'>HERE</a></h3></center>";
+            echo "<center><h3>PLease login <a href='../../index.html'>HERE</a></h3></center>";
         } else {
             echo "<div id='master-container' class='background-gradient-purple'>";
             echo "<img clas='owlSmall' src='../images/owl.svg'/>";
