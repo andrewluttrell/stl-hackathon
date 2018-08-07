@@ -3,7 +3,7 @@
 session_start();
 
 // Include database connection settings
-include('database.php');
+include('db.php');
 
 
 function loginUser($USER, $PASSWD) {
@@ -13,7 +13,7 @@ function loginUser($USER, $PASSWD) {
         $cookie_value = $USER;
         setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 
-        header("Location:userPageTemplate.php");
+        header("Location:user_home.php");
         exit();
     } else {
         echo "<p>User not found or password incorrect.<p>";

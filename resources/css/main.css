@@ -16,3 +16,22 @@
     height: 100%;
     z-index: -999;
 }
+
+.background-gradient-purple {
+	/* position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 414px;
+	height: 711px; */
+	background: -webkit-linear-gradient(270deg, rgba(198, 165, 252, 1) 0%, rgba(198, 165, 252, 1) 0%, rgba(133, 210, 237, 1) 100%, rgba(133, 210, 237, 1) 100%);
+	background: -moz-linear-gradient(180deg, rgba(198, 165, 252, 1) 0%, rgba(198, 165, 252, 1) 0%, rgba(133, 210, 237, 1) 100%, rgba(133, 210, 237, 1) 100%);
+	background: linear-gradient(180deg, rgba(198, 165, 252, 1) 0%, rgba(198, 165, 252, 1) 0%, rgba(133, 210, 237, 1) 100%, rgba(133, 210, 237, 1) 100%);
+	box-sizing: border-box;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(228, 228, 228, 1);
+	border-radius: 0px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}

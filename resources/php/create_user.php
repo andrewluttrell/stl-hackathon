@@ -20,9 +20,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     if( isset($_POST["user"], $_POST["passwd"])) {
       createUser($_POST["user"], $_POST["passwd"]);
     } else {
-      echo "<p>". "User:" . $_POST["userName"] .
-             " Passwd:" . $_POST["passwdVal"] .
-             "</p>";
         echo "<h2>Error! Illegal Access Attempt!</h2>";
     }
 }
