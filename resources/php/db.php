@@ -37,23 +37,22 @@ function checkUser($user, $pass) {
   $statement->bindValue(':pass', $pass);
   $result = $statement->execute();
 
+  while( $row = $result->fetchArray() ) {
+    $user = new stdClass();
+    $user->id = $row["id"];
+    $user->name = $row["name"];
+    $user->pass = $row["pass"];
+    $user->interest_rate = $row["interest_rate"];
+    $user->min_monthly = $row["minimum_monthly"];
+    $user->loan_rate = $row["loan_rate"];
+    $user->lawn = $row["lawn"];
+    $user->babysit = $row["babysit"];
+    $user->payoff = $row["payoff"];
+
+    return $user;
+  }
   if($result->fetchArray() == 0) {
     echo "No user found with those credentials.";
-  } else {
-    while( $row = $result->fetchArray() ) {
-      $user = getNewUser();
-      $user->id = $row["id"];
-      $user->name = $row["name"];
-      $user->pass = $row["pass"];
-      $user->interest_rate = $row["interest_rate"];
-      $user->min_monthly = $row["minimum_monthly"];
-      $user->loan_rate = $row["loan_rate"];
-      $user->lawn = $row["lawn"];
-      $user->babysit = $row["babysit"];
-      $user->payoff = $row["payoff"];
-
-      return $user;
-    }
   }
 }
 

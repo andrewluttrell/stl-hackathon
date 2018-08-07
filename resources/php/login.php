@@ -4,7 +4,6 @@ session_start();
 
 // Include database connection settings
 include('db.php');
-include('user.php');
 
 $user = getNewUser();
 
