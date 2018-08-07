@@ -1,12 +1,17 @@
+function checkAccess() {
+    var cookie = getCookie("");
+    var data   = "sessionCookie=" + cookie;
+    doAjax("resources/php/userHub.php", data)
+}
+
 function submitNewUser() {
     var userName  = document.getElementsByName("user")[0].value;
     var emailName = document.getElementsByName("email")[0].value;
     var passName  = document.getElementsByName("passwd")[0].value;
 
-    data = "userName=" + userName + "&emailName=" + emailName + "&passwdVal=" + passName;
+    var data = "userName=" + userName + "&emailName=" + emailName + "&passwdVal=" + passName;
     doAjax("resources/php/create_user.php", data)
 }
-
 
 function doAjax(processURI, formData) {
    var xhttp = new XMLHttpRequest();
