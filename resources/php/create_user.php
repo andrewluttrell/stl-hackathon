@@ -36,7 +36,7 @@ function createUser($USER, $EMAIL, $PASSWD) {
 // Determin action
 if($_SERVER['REQUEST_METHOD'] == "POST") {
     if( isset($_POST["userName"], $_POST["emailName"], $_POST["passwdVal"])) {
-        createUser($_POST["user"], $_POST["email"], $_POST["passwd"]);
+        createUser($_POST["userName"], $_POST["emailName"], $_POST["passwdVal"]);
     } else {
         echo "<p>". "User:" . $_POST["userName"] .
              " Email: " . $_POST["emailName"] .
