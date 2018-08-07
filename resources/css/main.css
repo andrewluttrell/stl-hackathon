@@ -18,9 +18,6 @@
 }
 
 #master-container {
-    position: absolute;
-    left: 0px;
-    top: 0px;
     width: 100%;
     height: 100%;
 }
@@ -136,4 +133,14 @@
 	font-style: normal;
 	font-size: 14px;
 	color: #CCCCCC;
+}
+
+.owlSmall {
+    width: 128px;
+    height: 128px;
+}
+
+.hoverColor:hover {
+    background-color: #444444;
+    cursor: pointer;
 }

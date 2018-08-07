@@ -19,14 +19,14 @@
     </center>
 
     <center>
-        <div id="facebook_button" class="ax_default shape1 mouseOver" data-label="Rectangle">
+        <div id="facebook_button" class="hoverColor" data-label="Rectangle">
             <img class="login-button-images" src="resources/images/fbLogo.png">
             <span>Signup with Facebook</span>
         </div>
     </center>
     <center>or sign up manually</center>
     <center>
-        <div id="twitter_button" class="ax_default shape1 mouseOver" data-label="Rectangle">
+        <div id="twitter_button" class="hoverColor" data-label="Rectangle">
             <img class="login-button-images" src="resources/images/twLogo.png">
             <span>Signup with Twitter</span>
         </div>
@@ -36,24 +36,15 @@
         <form action="resources/php/signup.php" method="post">
             <input type="text" name="userLogin" placeholder="Email Address" value=""><br/>
             <input type="password" name="userPasswd" placeholder="Password" value=""> <br/>
-            <input id="login-button" type="submit" name="submit" value="Sign up for my new account">
+            <input id="login-button" class="hoverColor" type="submit" name="submit" value="Sign up for my new account">
         </form>
     </center>
     <center>
     <p>
         <span style="font-family:'Arial';font-weight:400;font-style:normal;color:#FFFFFF;">Have an account?</span>
-        <a href="login.html"><span style="font-family:'Arial';font-weight:400;font-style:normal;color:#0099FF;">Log in!!</span></a>
+        <a href="index.html"><span style="font-family:'Arial';font-weight:400;font-style:normal;color:#0099FF;">Log in!!</span></a>
     </p>
     </center>
-    </div>
-
-
-    <div>
-      <form action="/resources/php/create_user.php" method="post">
-        <input type="text" name="user" placeholder="User" value="">
-        <input type="password" name="passwd" placeholder="Password" value="">
-        <input type="submit" name="Submit" value="Submit">
-      </form>
     </div>
 </body>
 </html>

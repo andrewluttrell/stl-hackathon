@@ -16,17 +16,29 @@ function loginUser($USER, $PASSWD) {
         header("Location:user_home.php");
         exit();
     } else {
-        echo "<p>User not found or password incorrect.<p>";
+        echo "<link rel=\"stylesheet\" href=\"../css/base.css\"/>";
+        echo "<link rel=\"stylesheet\" href=\"../css/main.css\"/>";
+        // <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+        echo "<div id='master-container' class='background-gradient-purple'>";
+        echo "<img clas='owlSmall' src='../images/owl.svg'/>";
+        echo "<center><p>User not found or password incorrect.</p></center>";
+        echo "<div class='userHomeRow2 hoverColor' onclick=\"location.href='../../index.html'\"><span>Try again.</span></div>" ;
+        echo "</div>";
+
     }
 
 }
 
 function checkDB($name, $pass) {
    $user = checkUser($name, $pass);
-   if( $user->name != '' ) {
-     return true;
+   if ($user) {
+       if( $user->name != '' ) {
+           return true;
+       } else {
+           return false;
+       }
    } else {
-     return false;
+       return false;
    }
 }
 
