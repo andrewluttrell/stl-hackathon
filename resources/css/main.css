@@ -37,7 +37,7 @@
 
 #facebook_button > p,
 #twitter_button > p {
-  padding: 10px 0px;
+  padding: 15px 0px;
 }
 #twitter_button {
     background-color: rgba(50, 203, 253, 1);
@@ -130,12 +130,33 @@
 	font-size: 14px;
 	color: #CCCCCC;
 }
-
-.owlSmall {
-    width: 128px;
-    height: 128px;
+.userHomeRow {
+  height: 60px;
+  clear: both;
 }
 
+.userHomeIcon {
+    width: 55px;
+    height: 41px;
+    padding: 10px 15px;
+    float: left;
+}
+
+.userHomeText {
+  float: left;
+  padding: 20px 0px;
+  color: white;
+}
+
+.owlSmall {
+  width: 171px;
+  height: 174px;
+  margin: 45px 121px;
+}
+
+.homeText {
+  color: white;
+}
 .hoverColor:hover {
     background-color: rgb(64, 64, 64);
     cursor: pointer;
