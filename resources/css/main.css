@@ -17,12 +17,63 @@
     z-index: -999;
 }
 
+#master-container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Login Page */
+
+#facebook_button, #twitter_button {
+	width: 300px;
+	height: 45px;
+	background: inherit;
+	border: none;
+	border-radius: 3.66665649414063px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-family: 'Arial';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+}
+
+#facebook_button {
+    background-color: rgba(60, 90, 152, 1);
+}
+
+#twitter_button {
+    background-color: rgba(50, 203, 253, 1);
+}
+
+#login-button {
+	width: 300px;
+	height: 45px;
+	background: inherit;
+	background-color: rgba(0, 153, 255, 1);
+	border: none;
+	border-radius: 3.66665649414063px;
+	-moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+	font-family: 'Arial';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+
+.login-button-images {
+	width: 16px;
+	height: 14px;
+}
+
 .background-gradient-purple {
-	/* position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 414px;
-	height: 711px; */
 	background: -webkit-linear-gradient(270deg, rgba(198, 165, 252, 1) 0%, rgba(198, 165, 252, 1) 0%, rgba(133, 210, 237, 1) 100%, rgba(133, 210, 237, 1) 100%);
 	background: -moz-linear-gradient(180deg, rgba(198, 165, 252, 1) 0%, rgba(198, 165, 252, 1) 0%, rgba(133, 210, 237, 1) 100%, rgba(133, 210, 237, 1) 100%);
 	background: linear-gradient(180deg, rgba(198, 165, 252, 1) 0%, rgba(198, 165, 252, 1) 0%, rgba(133, 210, 237, 1) 100%, rgba(133, 210, 237, 1) 100%);
