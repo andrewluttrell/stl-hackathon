@@ -1,14 +1,36 @@
 var playing = undefined;
 
 document.onclick = function functionName(eve) {
-    var target = eve.target;
+    var elm = eve.target;
 
-    if (target.className == "plarerVidShop") {
+    if (elm.className == "plarerVidShop") {
         document.getElementById("productInfoPopupWindow").style.display = "block";
-        target.play();
-        playing = target;
-    } else if (target.id == "closePopupShopWindow") {
-        target.parentElement.style.display = "none";
+        elm.play();
+        playing = elm;
+        var data = "searchQuery=" + elm.getAttribute("name");
+        getShopData(data);
+    } else if (elm.id == "closePopupShopWindow") {
+        elm.parentElement.style.display = "none";
         playing.pause();
     }
+}
+
+function getShopData(lookupData) {
+   var xhttp = new XMLHttpRequest();
+
+   xhttp.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+            processData(this.responseText);
+       }
+   };
+
+   xhttp.open("POST", "getShopData.php", true);
+   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+   xhttp.send(lookupData);
+}
+
+function processData(data) {
+    var dataWindow = document.getElementById("productInfoPopupWindow");
+    var textNode   = document.createTextNode(data);
+    dataWindow.append(textNode);
 }
