@@ -10,10 +10,22 @@
 #productInfoPopupWindow {
     display: none;
     position: fixed;
-    width: 414px;
-    height: 735px;
     z-index: 999;
-    background-color: rgba(0, 0, 0, 0.65);
+	width: 255px;
+	height: 425px;
+	background-color: rgba(255, 255, 255, 0.74);
+	box-sizing: border-box;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(121, 121, 121, 1);
+	border-radius: 0px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-align: left;
+    margin-top: 2em;
+    margin-left: 2em;
+    overflow: auto;
 }
 
 

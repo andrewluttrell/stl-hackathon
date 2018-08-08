@@ -15,6 +15,9 @@
       </div>
 
     <div id='master-container' class='background-gradient-purple'>
+        <a href="user_home.php">
+            <span><img src="../images/back.png" alt="">Back</span>
+        </a>
             <video class="plarerVidShop" name="phone_1" width="320px" height="240px" poster="../vids/vid_thumbnails/phone_1.png">
                 <source src="../vids/phone_1.mp4" type="video/mp4">
                  Your browser does not support the video tag.
@@ -23,7 +26,6 @@
                 <source src="../vids/phone_2.mp4" type="video/mp4">
                  Your browser does not support the video tag.
              </video>
-      <span>Back</span>
       <script src="/resources/js/shop.js" charset="utf-8"></script>
   </body>
 </html>
