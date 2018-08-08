@@ -23,11 +23,7 @@
             <li class='userHomeRow userHomeRow2 hoverColor'><img class='userHomeIcon' src='../images/glass.svg'/><div class="userHomeText">Search for your goods.</div></li>
             <li class='userHomeRow userHomeRow3 hoverColor'><img class='userHomeIcon' src='../images/book.svg'/><div class="userHomeText">Definitions for all those strange terms.</div></li>
           </ul>
-          <ul id="navBar">
-            <li><a href="user_home.php"><img id="homeButton" class="navBarIcon" src='../images/home.svg' /></a></li>
-            <li><a href="back.php"><img id="backButton" class="navBarIcon" src='../images/back.png' /></a></li>
-            <li><a href="user_settings.php"><img id="settingButton" class="navBarIcon" src='../images/gear.svg' /></a></li>
-          </ul>
+          <?php include("navbar.php") ?>
     <?php } ?>
 
 
