@@ -8,8 +8,9 @@
 }
 
 #productInfoPopupWindow {
+    display: none;
     position: fixed;
-    width: 100%;
+    width: 414px;
     height: 735px;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.65);
@@ -60,6 +61,15 @@
 	font-style: normal;
 	font-size: 14px;
 	color: #FFFFFF;
+}
+
+#closePopupShopWindow {
+    padding: 1.5em;
+}
+
+#closePopupShopWindow:hover {
+    background-color: rgba(255, 0, 0, 0.65);
+    cursor: pointer;
 }
 
 .login-button-images {
@@ -190,5 +200,14 @@
 
 .hoverColor:hover {
     background-color: rgb(64, 64, 64);
+    cursor: pointer;
+}
+
+.closePopupWindowButton {
+    padding: 1.5em;
+}
+
+.closePopupWindowButton:hover {
+    background-color: rgba(255, 0, 0, 0.5);
     cursor: pointer;
 }
