@@ -9,6 +9,9 @@
   <body>
       <div id="productInfoPopupWindow">
           <span id="closePopupShopWindow">X</span>
+          <div id="dataWindow">
+
+          </div>
       </div>
 
     <div id='master-container' class='background-gradient-purple'>

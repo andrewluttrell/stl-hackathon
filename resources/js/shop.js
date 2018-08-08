@@ -31,6 +31,5 @@ function getShopData(lookupData) {
 
 function processData(data) {
     var xButton = document.getElementById("closePopupShopWindow");
-console.log(data);
-    document.getElementById("productInfoPopupWindow").innerHtml = data;
+    document.getElementById("dataWindow").innerHTML = data;
 }
