@@ -236,3 +236,7 @@ table {
 .paymentOptions table, .paymentOptions th, .paymentOptions td {
   border: 1px solid rgba(204, 204, 204, 1);
 }
+
+.totalRow {
+  background-color: rgba(255, 255, 204, 1)
+}
