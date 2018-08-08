@@ -16,7 +16,7 @@ function searchDB($QUERY_VALUE) {
             <p style="font-size:16px;"><span style="font-family:\'Arial\';font-weight:400;"><br></span></p>
             <p style="font-size:18px;"><span style="font-family:\'Arial Bold\', \'Arial\';font-weight:700;">Cost: $799.99</span></p>
         </div>';    }
-    echo '<div id="login-button" style="width:155px">
+    echo '<div onclick="location.href=\'payment_options.php\'" class="hoverPointer" id="login-button" style="width:155px">
             <p><span>Choose Payment Options</span></p>
           </div>';
 }

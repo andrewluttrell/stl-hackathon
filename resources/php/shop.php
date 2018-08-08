@@ -28,7 +28,6 @@
             <script src="/resources/js/shop.js" charset="utf-8"></script>
             <?php
                 include("navbar.php");
-                include('payment_options.php');
             ?>
       <?php } ?>
   </body>
