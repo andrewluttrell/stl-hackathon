@@ -7,6 +7,7 @@
 }
 
 #productInfoPopupWindow {
+    display: none;
     position: fixed;
     width: 414px;
     height: 735px;
@@ -59,6 +60,15 @@
 	font-style: normal;
 	font-size: 14px;
 	color: #FFFFFF;
+}
+
+#closePopupShopWindow {
+    padding: 1.5em;
+}
+
+#closePopupShopWindow:hover {
+    background-color: rgba(255, 0, 0, 0.65);
+    cursor: pointer;
 }
 
 .login-button-images {
