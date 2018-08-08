@@ -30,7 +30,7 @@ function getShopData(lookupData) {
 }
 
 function processData(data) {
-    var dataWindow = document.getElementById("productInfoPopupWindow");
-    var textNode   = document.createTextNode(data);
-    dataWindow.append(textNode);
+    var xButton = document.getElementById("closePopupShopWindow");
+console.log(data);
+    document.getElementById("productInfoPopupWindow").innerHtml = data;
 }

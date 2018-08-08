@@ -3,7 +3,7 @@
 
 
 function searchDB($QUERY_VALUE) {
-    echo "<h2>" . $QUERY_VALUE . "</h2>";
+    echo "<p>" . $QUERY_VALUE . "</p>";
 }
 
 
