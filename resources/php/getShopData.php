@@ -29,6 +29,9 @@ function searchDB($QUERY_VALUE) {
             <p style="font-size:18px;"><span style="font-family:\'Arial Bold\', \'Arial\';font-weight:700;">Cost: $699.99</span></p>
         </div>';
     }
+    echo '<div id="login-button" style="width:155px">
+            <p><span>Choose Payment Options</span></p>
+          </div>';
 }
 
 
