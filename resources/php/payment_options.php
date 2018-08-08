@@ -12,11 +12,11 @@ $totalCost_loan = $cost + $salesTax + $loanInterest;
 ?>
 <html>
   <head>
-    <link rel="stylesheet" href="resources/css/main.css"/>
+    <link rel="stylesheet" href="../css/main.css"/>
   </head>
 <body>
   Payment Options
-  <table width=414px name="paymentOptions">
+  <table width=414px class="paymentOptions">
     <tr class="paymentHeaders">
       <th width=125px height=50px;><?= $productName ?></th>
       <th width=80px>Cash</th>

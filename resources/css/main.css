@@ -225,5 +225,14 @@
 }
 
 .paymentHeaders > th {
-    background-color: rgba(102, 102, 102, 1)
+    background-color: rgba(102, 102, 102, 1);
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.paymentOptions table, .paymentOptions th, .paymentOptions td {
+  border: 1px solid rgba(204, 204, 204, 1);
 }
