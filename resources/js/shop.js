@@ -6,6 +6,8 @@ document.onclick = function functionName(eve) {
     if (elm.className == "plarerVidShop") {
         document.getElementById("productInfoPopupWindow").style.display = "block";
         elm.play();
+        elm.style.width = "100%";
+        elm.style.height = "100%";
         playing = elm;
         var data = "searchQuery=" + elm.getAttribute("name");
         getShopData(data);
