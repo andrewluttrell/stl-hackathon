@@ -3,7 +3,8 @@
     min-height: 735px;
     max-width: 414px;
     max-height: 735px;
-    overflow: auto;
+    overflow: hidden;
+    border: solid black 3px;
 }
 
 #productInfoPopupWindow {
@@ -157,6 +158,36 @@
 .homeText {
   color: white;
 }
+
+#navBar {
+  border-top: solid 3px grey;
+  background-color: white;
+  height: 45px;
+  position: fixed;
+  width:414px;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.navBarIcon {
+  height: 26px;
+  width: 27px;
+  padding: 7px;
+}
+#homeButton {
+  float: left;
+}
+
+#backButton {
+  float: left;
+  text-align: center;
+  margin-left: 144px;
+}
+
+#settingButton {
+  float: right;
+}
+
 .hoverColor:hover {
     background-color: rgb(64, 64, 64);
     cursor: pointer;
