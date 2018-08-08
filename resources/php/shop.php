@@ -25,12 +25,11 @@
                       <source src="../vids/phone_1.mp4" type="video/mp4">
                        Your browser does not support the video tag.
                    </video>
-                  <!-- <video class="plarerVidShop" name="phone_2" width="320px" height="240px" poster="../vids/vid_thumbnails/phone_2.png">
-                      <source src="../vids/phone_2.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                   </video> -->
             <script src="/resources/js/shop.js" charset="utf-8"></script>
-            <?php include("navbar.php") ?>
+            <?php
+                include("navbar.php");
+                include('payment_options.php');
+            ?>
       <?php } ?>
   </body>
 </html>
